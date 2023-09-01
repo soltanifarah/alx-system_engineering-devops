@@ -1,2 +1,2 @@
 #!/bin/bash
-find * -maxdepth 0 \( -type d -printf "%p/, " -o -type f -printf "%p, " \) | sed 's/,
+echo ./* | tr ' ' ', ' | sed 's/\([a-zA-Z0-9]\)\//\1\//g'
