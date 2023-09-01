@@ -1,2 +1,2 @@
 #!/bin/bash
-find * -maxdepth 0 -type d -print0 | xargs -0 -I {} echo -n "{}/, " ; find * -maxdepth 0 -type f -print0 | xargs -0 -I {} echo -n "{}, " | sed 's/, $/\n/'
+find * -maxdepth 0 \( -type d -printf "%p/, " -o -type f -printf "%p, " \) | sed 's/,
