@@ -1,2 +1,2 @@
 #!/bin/bash
-echo ./* | tr ' ' ', ' | sed 's/\([a-zA-Z0-9]\)\//\1\//g'
+ls -map
