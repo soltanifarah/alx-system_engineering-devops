@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -maxdepth 1 -print | sort -k1.3 | awk 'NR==1{printf "./, ../, "} NR>1{gsub(/^\./,"");if (-d $1) printf "%s/, ",$0; else printf "%s, ",$0}' | sed 's/, $/\n/'
+echo ./* | tr ' ' ', ' | sed 's/\([a-zA-Z0-9]\)\//\1\//g'
